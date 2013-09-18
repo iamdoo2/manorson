@@ -1,0 +1,38 @@
+<script type="text/javascript">
+  queue = <%=raw @result%>;
+</script>
+<div class="hero-unit">
+  <div id="alert" class="alert alert-success">
+    <strong><%=t :post_to_wall%></strong> <%=t :post_to_wall_success%>
+  </div>
+  <h1><%=t :app_name%><%=image_tag 'female.png', style: 'margin-top:-1px;'%><%=image_tag 'male.png'%></h1>
+  <p><%=t :app_description%></p>
+  <div id="process" class="row">
+    <div class="span">(<span id="current_count"></span>/<span id="total_count"></span>) <span id="message"><%=t :processing%> <span id="name"></span></span><span id="complete"><%=t :complete%></span></div>
+  </div>
+  <div class="row">
+    <div class="span1"><%=t :male%></div>
+    <div class="span1 pull-right right"><%=t :female%></div>
+  </div>
+  <div class="row">
+    <div id="male_count" class="span1">0</div>
+    <div id="female_count" class="span1 pull-right right">0</div>
+  </div>
+  <div class="progress">
+    <div id="male_bar" class="bar bar-info">0%</div>
+    <div id="female_bar" class="bar bar-danger">0%</div>
+  </div>
+  <div class="row figure">
+    <div id="male_figure" class="span">
+    </div>
+    <div id="female_figure" class="span pull-right right">
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="span">
+      <a id="start_button" class="btn btn-primary btn-large"><%=t :start%></a>
+      <a id="publish_button" class="btn btn-primary btn-large disabled"><%=t :post_to_wall%></a>
+    </div>
+  </div>
+</div>
