@@ -3,10 +3,6 @@ class AgeController < ApplicationController
   CLIENT_ID = '610618668989552'
   APP_PAGE_URL = 'https://www.facebook.com/LarmeDeSennen?sk=app_610618668989552'
 
-  def index
-    render :text => "<script>window.top.location = '#{APP_PAGE_URL}';</script>" and return
-  end
-
   def show
     signed_request = Base64.decode64(params[:signed_request].split(".")[1]+"==")
     data = JSON.parse(signed_request)

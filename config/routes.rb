@@ -4,6 +4,8 @@ Manorson::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'age#index'
+  post '/' => 'age#show'
+  post 'show' => 'age#show'
   get 'show' => 'age#show'
   get 'count' => 'age#count'
   get 'publish' => 'age#publish'
