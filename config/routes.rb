@@ -4,6 +4,9 @@ Manorson::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'age#index'
+  get 'show' => 'age#show'
+  get 'count' => 'age#count'
+  get 'publish' => 'age#publish'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
