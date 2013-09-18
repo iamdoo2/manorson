@@ -10,4 +10,31 @@
  *
  *= require_self
  *= require_tree .
- */
+*/
+#female_bar {
+  float: right;
+}
+
+.figure div {
+  width: 320px;
+}
+
+.right {
+  text-align: right;
+}
+
+#alert {
+  display: none;
+}
+
+#process {
+  display: none;
+}
+
+#complete {
+  display: none;
+}
+
+#publish_button {
+  display: none;
+}
