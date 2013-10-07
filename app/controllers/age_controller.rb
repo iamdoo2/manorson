@@ -1,7 +1,8 @@
+require 'net/https'
 class AgeController < ApplicationController
 
   CLIENT_ID = '610618668989552'
-  APP_PAGE_URL = 'https://www.facebook.com/LarmeDeSennen?sk=app_610618668989552'
+  APP_PAGE_URL = 'http://www.facebook.com/LarmeDeSennen?sk=app_610618668989552'
 
   def show
     signed_request = Base64.decode64(params[:signed_request].split(".")[1]+"==")
